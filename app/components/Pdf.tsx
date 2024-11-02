@@ -10,8 +10,9 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/4.7.76/pdf.worker.js`;
-
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${
+  (pdfjs as unknown as { version: string })?.version
+}/build/pdf.worker.min.mjs`;
 
 export default function PdfViewer() {
   const [zoom, setZoom] = useState(100);

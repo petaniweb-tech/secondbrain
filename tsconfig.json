@@ -21,16 +21,17 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "*": ["lib/*"]  
+      "*": ["lib/*"]
     }
   },
   "include": [
-    "next-env.d.ts", 
-    "**/*.ts", 
-    "**/*.tsx", 
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib",              
-    "react-pdf.d.ts"    
+    "lib",
+    "react-pdf.d.ts",
+    "script/prebuild/pdfjs.mjs"
   ],
   "exclude": ["node_modules"]
 }

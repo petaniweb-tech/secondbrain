@@ -1,13 +1,24 @@
 declare module 'react-pdf' {
-    import { ComponentType } from 'react';
-  
-    export const Document: ComponentType<any>;
-    export const Page: ComponentType<any>;
-  
+    import { ComponentType, ReactElement } from "react";
+
+    interface Page {
+      pageNumber: number;
+      scale: number;
+      className: string;
+    }
+    export const Document: ComponentType<{
+      file: File;
+      onLoadSuccess: ({ numPages }: { numPages: number }) => void;
+      className: string;
+      children: ReactElement<Page>;
+    }>;
+
+    export const Page: ComponentType<Page>;
+
     export namespace pdfjs {
       function getDocument(
         src: string | Uint8Array | ArrayBuffer | object
-      ): Promise<any>;
+      ): Promise<unknown>;
       let GlobalWorkerOptions: {
         workerSrc: string;
       };

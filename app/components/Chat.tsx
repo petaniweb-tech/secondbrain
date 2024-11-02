@@ -1,11 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Slider } from "@/components/ui/slider";
-import { ChevronLeft, ChevronRight, Minus, Plus, Send } from "lucide-react";
-import { useState } from "react";
+// import { Card } from "@/components/ui/card";
+// import { Slider } from "@/components/ui/slider";
+import { Send } from "lucide-react";
+// import { useState } from "react";
 
 export default function Chat() {
   return (
@@ -17,11 +17,11 @@ export default function Chat() {
           </div>
           <div className="mr-auto max-w-[80%] rounded-lg bg-primary p-4">
             <p className="text-sm text-primary-foreground">
-              This document appears to be "The Tragedy of Romeo and Juliet" by
-              William Shakespeare, edited by Barbara A. Mowat and Paul Werstine.
-              It&apos;s published by the Folger Shakespeare Library. The text
-              includes explanatory notes, illustrations, and additional
-              materials to help readers better understand the play.
+              This document appears to be &quot;The Tragedy of Romeo and
+              Juliet&quot; by William Shakespeare, edited by Barbara A. Mowat
+              and Paul Werstine. It&apos;s published by the Folger Shakespeare
+              Library. The text includes explanatory notes, illustrations, and
+              additional materials to help readers better understand the play.
             </p>
           </div>
         </div>
